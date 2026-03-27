@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr T Moodley Inc — Healthcare For Every Journey</title>
+  <meta name="description" content="Comprehensive family healthcare and specialised aviation medicals in Tongaat and Umhlanga, guided by over 20 years of clinical experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════ NAVIGATION ═══════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Dr T Moodley Inc Home">
+        <img src="assets/logo-light.png" alt="Dr T Moodley Inc" class="nav__logo-img">
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/" class="nav__link nav__link--active">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="/about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item nav__item--has-dropdown">
+            <button class="nav__link nav__link--dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              Services
+              <svg class="nav__chevron" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="nav__dropdown" role="menu">
+              <li><a href="/services/obesity-hypertension-diabetes" class="nav__dropdown-link" role="menuitem">Centre for Obesity, Hypertension and Diabetes Excellence</a></li>
+              <li><a href="/services/travel-vaccine-clinic" class="nav__dropdown-link" role="menuitem">Travel &amp; Paediatric Vaccine Clinic</a></li>
+              <li><a href="/services/drug-alcohol-detox" class="nav__dropdown-link" role="menuitem">Drug &amp; Alcohol Detox Clinic</a></li>
+              <li><a href="/services/chronic-conditions" class="nav__dropdown-link" role="menuitem">Management of Chronic Conditions</a></li>
+              <li><a href="/services/executive-insurance-medicals" class="nav__dropdown-link" role="menuitem">Executive &amp; Insurance Medicals</a></li>
+              <li><a href="/services/male-female-health" class="nav__dropdown-link" role="menuitem">Male &amp; Female Health</a></li>
+              <li><a href="/services/weight-management" class="nav__dropdown-link" role="menuitem">Weight Management &amp; Sports Nutrition</a></li>
+              <li><a href="/services/dermatology-cryotherapy" class="nav__dropdown-link" role="menuitem">Dermatology Cryotherapy</a></li>
+              <li><a href="/services/iv-drips" class="nav__dropdown-link" role="menuitem">IV Drips — Glow, Immune Boosting, Anti-Ageing</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="/aviation-medical-exams" class="nav__link">Aviation Medical Exams</a>
+          </li>
+          <li class="nav__item">
+            <a href="/contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ HERO ════════════════════════════════ -->
+  <section class="hero" id="home">
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero__bg">
+      <img src="assets/hero.jpg" alt="" class="hero__bg-img" aria-hidden="true">
+      <div class="hero__bg-overlay"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__text">
+        <p class="hero__eyebrow">
+          <span class="hero__eyebrow-line"></span>
+          Dr T Moodley Inc
+        </p>
+        <h1 class="hero__title">
+          Healthcare<br>
+          <em>For Every</em><br>
+          Journey
+        </h1>
+        <p class="hero__desc">
+          A welcoming space for comprehensive family care and aviation medicals, focused on helping you feel healthy and ready for your next journey.
+        </p>
+        <div class="hero__actions">
+          <a href="/contact" class="btn btn--primary">Contact Us</a>
+          <a href="#services" class="btn btn--ghost">Our Services</a>
+        </div>
+      </div>
+
+      <div class="hero__panel" aria-hidden="true">
+        <div class="hero__panel-header">
+          <div class="hero__panel-dot hero__panel-dot--green"></div>
+          <div class="hero__panel-dot hero__panel-dot--amber"></div>
+          <div class="hero__panel-dot hero__panel-dot--red"></div>
+          <span>Practice Overview</span>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-num">20<sup>+</sup></span>
+            <span class="hero__stat-label">Years of Clinical Experience</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">9<sup>+</sup></span>
+            <span class="hero__stat-label">Specialist Services</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">2</span>
+            <span class="hero__stat-label">Clinic Locations</span>
+          </div>
+        </div>
+        <div class="hero__locations">
+          <div class="hero__location">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="5" r="2.5" stroke="#1a6bff" stroke-width="1.2"/><path d="M6 1C3.8 1 2 2.8 2 5c0 3 4 7 4 7s4-4 4-7c0-2.2-1.8-4-4-4z" stroke="#1a6bff" stroke-width="1.2" fill="none"/></svg>
+            Tongaat
+          </div>
+          <div class="hero__location">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="5" r="2.5" stroke="#1a6bff" stroke-width="1.2"/><path d="M6 1C3.8 1 2 2.8 2 5c0 3 4 7 4 7s4-4 4-7c0-2.2-1.8-4-4-4z" stroke="#1a6bff" stroke-width="1.2" fill="none"/></svg>
+            Umhlanga
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#comprehensive" class="hero__scroll" aria-label="Scroll down">
+      <span class="hero__scroll-label">Scroll</span>
+      <div class="hero__scroll-icon">
+        <div class="hero__scroll-dot"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════ COMPREHENSIVE HEALTHCARE ════════════ -->
+  <section class="comprehensive" id="comprehensive">
+    <div class="comprehensive__image-col">
+      <div class="comprehensive__img-wrap">
+        <img src="assets/community-healthcare.jpg" alt="Dr Moodley serving the Tongaat and Umhlanga communities" class="comprehensive__img">
+        <div class="comprehensive__img-accent"></div>
+      </div>
+      <div class="comprehensive__badge">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 2L12.4 7.6L18.5 8.2L14 12.4L15.4 18.4L10 15.3L4.6 18.4L6 12.4L1.5 8.2L7.6 7.6L10 2Z" stroke="#1a6bff" stroke-width="1.5" fill="none"/>
+        </svg>
+        <div>
+          <strong>Tongaat &amp; Umhlanga</strong>
+          <span>Two convenient locations</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="comprehensive__text-col">
+      <p class="section-eyebrow">Our Approach</p>
+      <h2 class="section-title">Comprehensive Healthcare with an Aviation Focus</h2>
+      <p class="section-body">
+        Rooted in the Tongaat and Umhlanga communities, our practice offers comprehensive family healthcare alongside specialised aviation and aerospace medical services. Guided by more than two decades of clinical experience, our approach prioritises thoughtful, modern care, including focused management of hypertension, diabetes and obesity.
+      </p>
+      <a href="/about" class="btn btn--primary">Read More</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ MEET DR MOODLEY ══════════════════════ -->
+  <section class="meet-doctor">
+    <div class="meet-doctor__grid">
+      <div class="meet-doctor__text">
+        <p class="section-eyebrow">The Physician</p>
+        <h2 class="section-title">Meet Dr Terence Moodley</h2>
+        <p class="section-body">
+          Dr Terence Moodley is a Family Practitioner with over 20 years of clinical experience across government, private and emergency medicine healthcare settings. With a special interest in Aviation and Aerospace Medicine, he combines broad medical expertise with an understanding of the unique demands of flight. Trained internationally and deeply connected to the Tongaat and Umhlanga communities, he remains committed to advancing local healthcare standards while promoting the link between physical and mental well-being.
+        </p>
+
+        <div class="meet-doctor__creds">
+          <div class="meet-doctor__cred">
+            <div class="meet-doctor__cred-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l1.8 3.6L14 5.2l-3 2.9.7 4.1L8 10.1l-3.7 2.1L5 8.1 2 5.2l4.2-.6L8 1z" stroke="#1a6bff" stroke-width="1.2" fill="none"/></svg>
+            </div>
+            <span>M.D. Medicine — SHSU (2001–2006)</span>
+          </div>
+          <div class="meet-doctor__cred">
+            <div class="meet-doctor__cred-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 12L14 4M14 4H9M14 4V9" stroke="#1a6bff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span>Aviation Med &amp; Aerospace Physiology — UP (2017)</span>
+          </div>
+          <div class="meet-doctor__cred">
+            <div class="meet-doctor__cred-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#1a6bff" stroke-width="1.2"/><path d="M8 4v4l3 2" stroke="#1a6bff" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </div>
+            <span>Post Grad Public Health — Yale University (2017)</span>
+          </div>
+          <div class="meet-doctor__cred">
+            <div class="meet-doctor__cred-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="9" rx="1" stroke="#1a6bff" stroke-width="1.2"/><path d="M5 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="#1a6bff" stroke-width="1.2"/></svg>
+            </div>
+            <span>Chairman — Tongaat Independent Practitioners Association</span>
+          </div>
+        </div>
+
+        <a href="/about" class="btn btn--primary">Learn More</a>
+      </div>
+
+      <div class="meet-doctor__image">
+        <div class="meet-doctor__img-frame">
+          <img src="assets/dr-moodley.jpg" alt="Dr Terence Moodley — Family Practitioner and Aviation Medicine Specialist" class="meet-doctor__img">
+          <div class="meet-doctor__img-glow"></div>
+        </div>
+        <div class="meet-doctor__tag">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 12L14 4M14 4H9M14 4V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          CAA Authorised Medical Examiner
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SERVICES ════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="services__header">
+      <p class="section-eyebrow section-eyebrow--center">What We Offer</p>
+      <h2 class="section-title section-title--center">Explore Our Services</h2>
+    </div>
+
+    <div class="services__grid">
+
+      <article class="service-card">
+        <div class="service-card__media">
+          <img src="assets/vaccine-clinic.jpg" alt="Travel and Paediatric Vaccine Clinic" loading="lazy">
+          <div class="service-card__media-overlay"></div>
+          <span class="service-card__tag">Preventative</span>
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Travel &amp; Paediatric Vaccine Clinic</h3>
+          <p class="service-card__text">Whether your little one is preparing for school or you are planning international travel, access safe, efficient protection in one convenient location.</p>
+          <a href="/services/travel-vaccine-clinic" class="service-card__link">
+            See More
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__media">
+          <img src="assets/detox-clinic.jpg" alt="Drug and Alcohol Detox Clinic" loading="lazy">
+          <div class="service-card__media-overlay"></div>
+          <span class="service-card__tag">Recovery</span>
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Drug &amp; Alcohol Detox Clinic</h3>
+          <p class="service-card__text">Receive confidential, medically supervised support for individuals seeking help with substance dependence, structured for safe withdrawal and recovery.</p>
+          <a href="/services/drug-alcohol-detox" class="service-card__link">
+            See More
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__media">
+          <img src="assets/chronic-conditions.jpg" alt="Management of Chronic Conditions" loading="lazy">
+          <div class="service-card__media-overlay"></div>
+          <span class="service-card__tag">Ongoing Care</span>
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Management of Chronic Conditions</h3>
+          <p class="service-card__text">Ongoing care for chronic conditions such as HIV, diabetes and hypertension. Treatment plans are practical, tailored and follow evidence-based guidelines.</p>
+          <a href="/services/chronic-conditions" class="service-card__link">
+            See More
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__media">
+          <img src="assets/executive-medical.jpg" alt="Executive and Insurance Medicals" loading="lazy">
+          <div class="service-card__media-overlay"></div>
+          <span class="service-card__tag">Corporate</span>
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Executive &amp; Insurance Medicals</h3>
+          <p class="service-card__text">Comprehensive medical assessments for employment, insurance and corporate requirements, including Discovery Vitality and Polmed screenings.</p>
+          <a href="/services/executive-insurance-medicals" class="service-card__link">
+            See More
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__media">
+          <img src="assets/health-screening.jpg" alt="Male and Female Health" loading="lazy">
+          <div class="service-card__media-overlay"></div>
+          <span class="service-card__tag">Preventative</span>
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Male &amp; Female Health</h3>
+          <p class="service-card__text">Focused care addressing routine screenings, hormonal health and preventative needs. Support designed around every stage of adult life, for men and women.</p>
+          <a href="/services/male-female-health" class="service-card__link">
+            See More
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__media">
+          <img src="assets/weight-management.jpg" alt="Weight Management and Sports Nutrition" loading="lazy">
+          <div class="service-card__media-overlay"></div>
+          <span class="service-card__tag">Wellness</span>
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Weight Management &amp; Sports Nutrition</h3>
+          <p class="service-card__text">Structured guidance to support healthy weight goals and performance. Plans combine medical insight with realistic nutrition strategies for lasting results.</p>
+          <a href="/services/weight-management" class="service-card__link">
+            See More
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__media">
+          <img src="assets/dermatology.jpg" alt="Dermatology Cryotherapy" loading="lazy">
+          <div class="service-card__media-overlay"></div>
+          <span class="service-card__tag">Dermatology</span>
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Dermatology Cryotherapy</h3>
+          <p class="service-card__text">Targeted cryotherapy treatment for selected benign skin lesions. Procedures are quick, precise and performed in a clinical setting by experienced medical staff.</p>
+          <a href="/services/dermatology-cryotherapy" class="service-card__link">
+            See More
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__media">
+          <img src="assets/iv-drip.jpg" alt="IV Drips" loading="lazy">
+          <div class="service-card__media-overlay"></div>
+          <span class="service-card__tag">Wellness</span>
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">IV Drips — Glow, Immune Boosting, Anti-Ageing</h3>
+          <p class="service-card__text">Intravenous therapy in a monitored environment. Immune boosting, anti-ageing and skin glow therapies conducted by licensed, experienced medical personnel.</p>
+          <a href="/services/iv-drips" class="service-card__link">
+            See More
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card service-card--featured">
+        <div class="service-card__media">
+          <img src="assets/aviation-exam.jpg" alt="Aviation Medical Exams" loading="lazy">
+          <div class="service-card__media-overlay"></div>
+          <span class="service-card__tag">Aviation</span>
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Aviation Medical Exams</h3>
+          <p class="service-card__text">Aviation medical assessments conducted in accordance with Civil Aviation Authority (CAA) regulatory requirements — ensuring you remain fit, focused and cleared for flight.</p>
+          <a href="/aviation-medical-exams" class="service-card__link">
+            See More
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ AVIATION MEDICINE ════════════════════ -->
+  <section class="aviation">
+    <div class="aviation__bg">
+      <img src="assets/aviation-medicine.jpg" alt="" class="aviation__bg-img" aria-hidden="true">
+      <div class="aviation__bg-overlay"></div>
+    </div>
+    <div class="aviation__grid-lines" aria-hidden="true"></div>
+
+    <div class="aviation__content">
+      <div class="aviation__badge">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 14L16 4M16 4H10M16 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Specialised Field
+      </div>
+      <h2 class="aviation__title">What is<br><em>Aviation Medicine?</em></h2>
+      <p class="aviation__body">
+        Aviation medicine is a specialised field of healthcare focused on the physical and mental demands of flying. It addresses how altitude, reduced oxygen levels, acceleration forces, fatigue and environmental changes affect the human body, ensuring pilots and aviation personnel remain medically fit and safe to operate aircraft.
+      </p>
+      <a href="/aviation-medical-exams" class="btn btn--primary">Find Out More</a>
+    </div>
+
+    <div class="aviation__instruments" aria-hidden="true">
+      <div class="aviation__dial">
+        <div class="aviation__dial-ring"></div>
+        <div class="aviation__dial-needle"></div>
+        <span>ALT</span>
+      </div>
+      <div class="aviation__dial aviation__dial--sm">
+        <div class="aviation__dial-ring"></div>
+        <div class="aviation__dial-needle aviation__dial-needle--alt"></div>
+        <span>SPD</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ TESTIMONIALS ═════════════════════════ -->
+  <section class="testimonials">
+    <div class="testimonials__inner">
+      <div class="testimonials__header">
+        <p class="section-eyebrow section-eyebrow--center">Client Voices</p>
+        <h2 class="section-title section-title--center">What Our Clients Say About Us</h2>
+      </div>
+
+      <div class="testimonials__track-wrap" aria-live="polite">
+        <div class="testimonials__track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "Dr Moodley has been my family doctor for years. His thoroughness and genuine care for patients is unlike anything I have experienced before. Our entire family trusts him completely."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">SK</div>
+              <div class="testimonial-card__info">
+                <strong>S. Khumalo</strong>
+                <span>Umhlanga Patient</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "I completed my aviation medical with Dr Moodley. The process was professional, efficient and he took the time to explain every step. Highly recommended for any pilot."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">TP</div>
+              <div class="testimonial-card__info">
+                <strong>T. Pillay</strong>
+                <span>Aviation Medical Patient</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "The IV drip service is exceptional. The staff are professional and the environment is clean and welcoming. I always leave feeling refreshed and revitalised."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">NM</div>
+              <div class="testimonial-card__info">
+                <strong>N. Mthembu</strong>
+                <span>Tongaat Patient</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="#1a6bff"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.6 3.5L7 9l-3.1 1.5.6-3.5L2 4.5l3.5-.5L7 1z"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "Managing my diabetes has been so much easier with the ongoing support from Dr Moodley's practice. The team is knowledgeable, patient and genuinely invested in your wellbeing."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">LN</div>
+              <div class="testimonial-card__info">
+                <strong>L. Naidoo</strong>
+                <span>Chronic Conditions Patient</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials__controls">
+        <button class="testimonials__btn testimonials__btn--prev" id="testimonialPrev" aria-label="Previous testimonial">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="testimonials__dots" id="testimonialDots" role="tablist" aria-label="Testimonial navigation">
+          <button class="testimonials__dot testimonials__dot--active" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
+          <button class="testimonials__dot" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
+          <button class="testimonials__dot" role="tab" aria-selected="false" aria-label="Testimonial 3"></button>
+          <button class="testimonials__dot" role="tab" aria-selected="false" aria-label="Testimonial 4"></button>
+        </div>
+        <button class="testimonials__btn testimonials__btn--next" id="testimonialNext" aria-label="Next testimonial">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="/" class="footer__logo">
+          <img src="assets/logo-light.png" alt="Dr T Moodley Inc" class="footer__logo-img">
+        </a>
+        <p class="footer__tagline">
+          Comprehensive family healthcare and specialised aviation medicals delivered with a strong focus on preventative medicine and community patient-centric care.
+        </p>
+      </div>
+
+      <div class="footer__locations">
+        <div class="footer__location">
+          <h3 class="footer__location-title">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="6" r="2.5" stroke="#1a6bff" stroke-width="1.2"/><path d="M7 1C4.2 1 2 3.2 2 6c0 3.5 5 8 5 8s5-4.5 5-8c0-2.8-2.2-5-5-5z" stroke="#1a6bff" stroke-width="1.2" fill="none"/></svg>
+            Umhlanga
+          </h3>
+          <address class="footer__address">
+            Suite 201, Medstone Medical Centre<br>
+            19 The High Street, Umhlanga, 4319
+          </address>
+          <ul class="footer__contact-list">
+            <li>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1.5 3C1.5 2.2 2.2 1.5 3 1.5H4.5L5.5 4 4 5C4.8 6.6 5.4 7.2 7 8l1-1.5 2.5 1V9c0 .8-.7 1.5-1.5 1.5C4.7 10.5 1.5 7.3 1.5 3z" stroke="#1a6bff" stroke-width="1" fill="none"/></svg>
+              <a href="tel:0310026045">031 002 6045</a>
+            </li>
+            <li>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="2.5" width="10" height="7" rx="1" stroke="#1a6bff" stroke-width="1"/><path d="M1 4l5 3 5-3" stroke="#1a6bff" stroke-width="1"/></svg>
+              <a href="mailto:drtm@telkomsa.net">drtm@telkomsa.net</a>
+            </li>
+            <li>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 8.5C8.5 9.9 5 10.5 2 7.5S2 3 3.5 1.5l1.5 1.5L4 4.5C5 6 6 7 7.5 8l1.5-1 1.5 1.5z" stroke="#1a6bff" stroke-width="1" fill="none"/></svg>
+              <a href="https://wa.me/27684937839">068 493 7839</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__location">
+          <h3 class="footer__location-title">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="6" r="2.5" stroke="#1a6bff" stroke-width="1.2"/><path d="M7 1C4.2 1 2 3.2 2 6c0 3.5 5 8 5 8s5-4.5 5-8c0-2.8-2.2-5-5-5z" stroke="#1a6bff" stroke-width="1.2" fill="none"/></svg>
+            Tongaat
+          </h3>
+          <address class="footer__address">
+            4 Cassia Road<br>
+            Chelmsford Heights, Tongaat, 4399
+          </address>
+          <ul class="footer__contact-list">
+            <li>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1.5 3C1.5 2.2 2.2 1.5 3 1.5H4.5L5.5 4 4 5C4.8 6.6 5.4 7.2 7 8l1-1.5 2.5 1V9c0 .8-.7 1.5-1.5 1.5C4.7 10.5 1.5 7.3 1.5 3z" stroke="#1a6bff" stroke-width="1" fill="none"/></svg>
+              <a href="tel:0329443456">032 944 3456</a>
+            </li>
+            <li>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="2.5" width="10" height="7" rx="1" stroke="#1a6bff" stroke-width="1"/><path d="M1 4l5 3 5-3" stroke="#1a6bff" stroke-width="1"/></svg>
+              <a href="mailto:drtm@telkomsa.net">drtm@telkomsa.net</a>
+            </li>
+            <li>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 8.5C8.5 9.9 5 10.5 2 7.5S2 3 3.5 1.5l1.5 1.5L4 4.5C5 6 6 7 7.5 8l1.5-1 1.5 1.5z" stroke="#1a6bff" stroke-width="1" fill="none"/></svg>
+              <a href="https://wa.me/27813374299">081 337 4299</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-col">
+          <h3 class="footer__nav-title">Quick Links</h3>
+          <ul class="footer__nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services/travel-vaccine-clinic">Vaccine Clinic</a></li>
+            <li><a href="/services/chronic-conditions">Chronic Conditions</a></li>
+            <li><a href="/aviation-medical-exams">Aviation Medical Exams</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; <span id="footerYear"></span> Dr T Moodley Inc. All rights reserved.</p>
+      <p class="footer__reg">HPCSA Registered &nbsp;|&nbsp; CAA Authorised Medical Examiner</p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

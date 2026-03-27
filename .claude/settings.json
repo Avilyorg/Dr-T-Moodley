@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://api.freepik.com/v1/resources?locale=en-US&page=1&limit=5&order=relevance&filters%5Bcontent_type%5D%5Bphoto%5D=1&term=pilot+aviation+medical+cockpit\" -H \"X-Freepik-API-Key: FPSXadae2fa2c8cc137be69073a72a3451bc\" -H \"Accept: application/json\")",
+      "Bash(curl -s \"https://api.freepik.com/v1/resources?locale=en-US&page=1&limit=5&order=relevance&filters%5Bcontent_type%5D%5Bphoto%5D=1&term=dermatology+skin+treatment+cryotherapy\" -H \"X-Freepik-API-Key: FPSXadae2fa2c8cc137be69073a72a3451bc\" -H \"Accept: application/json\")"
+    ]
+  }
+}
