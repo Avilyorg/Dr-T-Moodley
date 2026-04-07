@@ -89,15 +89,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .section-eyebrow--center::before { display: none; }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
   color: var(--white);
   margin-bottom: 20px;
 }
 .section-title em {
-  font-style: normal;
+  font-style: italic;
+  font-weight: 300;
   color: var(--blue-bright);
 }
 .section-title--center { text-align: center; }
@@ -114,7 +115,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
   padding: 14px 28px;
   border-radius: 6px;
   font-family: var(--font);
@@ -126,9 +127,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-decoration: none;
 }
 .btn--primary {
-  background: var(--blue);
+  background: #102a51;
   color: var(--white);
-  border: 1.5px solid var(--blue);
+  border: 1.5px solid #102a51;
 }
 .btn--primary:hover {
   background: var(--blue-bright);
@@ -155,6 +156,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--blue-glow-sm);
   border-color: var(--blue);
   box-shadow: 0 0 20px var(--blue-glow);
+}
+.btn--inline {
+  align-self: flex-start;
 }
 
 /* ════════════════════════════════════════════════════════════
@@ -193,9 +197,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center;
   flex-shrink: 0;
   text-decoration: none;
+  padding-top:15px;
 }
 .nav__logo-img {
-  height: 42px;
+  height: 80px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -331,7 +336,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top center;
   filter: saturate(0.6);
 }
 .hero__bg-overlay {
@@ -492,14 +497,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero__scroll {
   position: absolute;
   bottom: 36px;
-  left: 48px;
+  left: 50%;
   z-index: 3;
   display: flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
   opacity: 0;
-  animation: heroFadeUp 0.9s 1.1s var(--ease-out) forwards;
+  animation: heroFadeUpCenter 0.9s 1.1s var(--ease-out) forwards;
 }
 .hero__scroll-label {
   font-size: 0.72rem;
@@ -533,6 +538,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @keyframes heroFadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeUpCenter {
+  from { opacity: 0; transform: translateX(-50%) translateY(24px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 @keyframes heroFadeLeft {
   from { opacity: 0; transform: translateX(24px); }
@@ -577,9 +586,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .comprehensive__badge {
-  position: absolute;
-  bottom: 32px;
-  left: 32px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -603,6 +609,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .comprehensive__badge span {
   font-size: 0.75rem;
   color: var(--muted);
+}
+.comprehensive__logo-eyebrow {
+  width: 16px;
+  height: 20px;
+  margin-bottom: 16px;
+  display: block;
 }
 
 .comprehensive__text-col {
@@ -674,13 +686,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  aspect-ratio: 3/4;
 }
 .meet-doctor__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .meet-doctor__img-glow {
   position: absolute;
@@ -751,7 +761,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .service-card__media {
   position: relative;
-  height: 200px;
+  height: 230px;
   overflow: hidden;
 }
 .service-card__media img {
@@ -839,7 +849,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.5) brightness(0.6);
 }
 .aviation__bg-overlay {
   position: absolute;
@@ -1012,11 +1021,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .testimonials__track {
   display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
   transition: transform 0.5s var(--ease-out);
 }
 
 .testimonial-card {
-  flex: 0 0 100%;
+  flex: 0 0 calc(50% - 12px);
   background: var(--navy-dark);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -1024,9 +1035,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 720px;
-  margin: 0 auto;
-  width: 100%;
+  box-sizing: border-box;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 .testimonial-card:hover {
@@ -1290,7 +1299,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .footer__top { padding: 60px 32px; gap: 48px; }
   .footer__bottom { padding: 20px 32px; }
   .hero__content { padding-left: 32px; padding-right: 32px; }
-  .hero__scroll { left: 32px; }
+  .hero__scroll { left: 50%; }
 }
 
 /* ── 1024px ── */
@@ -1307,7 +1316,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   .meet-doctor__grid { grid-template-columns: 1fr; gap: 48px; }
   .meet-doctor__image { order: -1; max-width: 380px; }
-  .meet-doctor__img-frame { aspect-ratio: 4/3; }
+  .meet-doctor__img-frame { aspect-ratio: unset; }
   .meet-doctor__tag { white-space: nowrap; }
 
   .services__grid { grid-template-columns: repeat(2, 1fr); }
@@ -1383,10 +1392,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   .hero__content { padding: 0 20px 60px; padding-top: calc(var(--nav-h) + 40px); }
   .hero__title { font-size: clamp(2.4rem, 10vw, 4rem); }
-  .hero__scroll { left: 20px; bottom: 24px; }
+  .hero__scroll { left: 50%; bottom: 24px; }
 
   .comprehensive__text-col { padding: 48px 20px; }
-  .comprehensive__badge { left: 16px; bottom: 16px; }
 
   .meet-doctor { padding: 80px 20px; }
 
@@ -1396,7 +1404,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .aviation__content { padding: 60px 20px; }
 
   .testimonials { padding: 80px 20px; }
-  .testimonial-card { flex: 0 0 calc(100% - 0px); }
+  .testimonial-card { flex: 0 0 100%; }
 
   .footer__top { padding: 48px 20px; }
   .footer__locations { grid-template-columns: 1fr; }

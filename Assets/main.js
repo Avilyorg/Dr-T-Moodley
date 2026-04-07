@@ -220,26 +220,35 @@
 
   const cards = track.querySelectorAll('.testimonial-card');
   const total = cards.length;
+  const perPage = () => window.innerWidth <= 768 ? 1 : 2;
   let current = 0;
   let autoTimer;
 
+  function pageCount() { return Math.ceil(total / perPage()); }
+
   /* Build dots dynamically */
-  dotsContainer.innerHTML = '';
-  const dots = Array.from({ length: total }, (_, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'testimonials__dot' + (i === 0 ? ' testimonials__dot--active' : '');
-    btn.setAttribute('role', 'tab');
-    btn.setAttribute('aria-selected', String(i === 0));
-    btn.setAttribute('aria-label', `Testimonial ${i + 1}`);
-    btn.addEventListener('click', () => { goTo(i); resetAuto(); });
-    dotsContainer.appendChild(btn);
-    return btn;
-  });
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    return Array.from({ length: pageCount() }, (_, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'testimonials__dot' + (i === 0 ? ' testimonials__dot--active' : '');
+      btn.setAttribute('role', 'tab');
+      btn.setAttribute('aria-selected', String(i === 0));
+      btn.setAttribute('aria-label', `Slide ${i + 1}`);
+      btn.addEventListener('click', () => { goTo(i); resetAuto(); });
+      dotsContainer.appendChild(btn);
+      return btn;
+    });
+  }
+  let dots = buildDots();
 
   function goTo(index) {
-    current = ((index % total) + total) % total;
-    const cardWidth = track.parentElement.offsetWidth;
-    track.style.transform = `translateX(-${current * cardWidth}px)`;
+    const pages = pageCount();
+    current = ((index % pages) + pages) % pages;
+    const trackWidth = track.parentElement.offsetWidth;
+    const gap = perPage() > 1 ? 24 : 0;
+    const slideWidth = trackWidth + gap;
+    track.style.transform = `translateX(-${current * slideWidth}px)`;
 
     dots.forEach((dot, i) => {
       dot.classList.toggle('testimonials__dot--active', i === current);
@@ -272,7 +281,7 @@
     }
   });
 
-  window.addEventListener('resize', () => goTo(current));
+  window.addEventListener('resize', () => { dots = buildDots(); goTo(0); });
 
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     startAuto();
