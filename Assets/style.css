@@ -694,8 +694,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .meet-doctor__img-glow {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 60%, var(--navy-deepest) 100%);
+  inset: 0; 
   pointer-events: none;
 }
 
