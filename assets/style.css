@@ -1342,7 +1342,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     top: var(--nav-h);
     left: 0;
     right: 0;
-    bottom: 0;
+    height: calc(100vh - var(--nav-h));
     background: rgba(2,12,27,0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1351,6 +1351,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     justify-content: flex-start;
     padding: 24px 20px 40px;
     overflow-y: auto;
+    overflow-x: hidden;
     transform: translateX(100%);
     transition: transform 0.3s var(--ease-out);
     border-top: 1px solid var(--border);
@@ -1385,6 +1386,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     display: none;
     padding: 4px 0 4px 12px;
     margin: 4px 0;
+    min-width: 0;
+    width: 100%;
+  }
+  /* Override the high-specificity desktop open-state transform */
+  .nav__item--has-dropdown:hover .nav__dropdown,
+  .nav__item--has-dropdown.open .nav__dropdown {
+    transform: none;
+    opacity: 1;
   }
   .nav__item--has-dropdown.open .nav__dropdown { display: block; }
   .nav__dropdown li + li { border-top: none; }
